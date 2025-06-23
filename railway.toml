@@ -1,0 +1,9 @@
+[build]
+builder = "NIXPACKS"
+
+[deploy]
+startCommand = "python3 api.py"
+
+[schedules]
+# Runs send_tips.py at 8:00 AM UTC every day
+sendtips = { schedule = "0 8 * * *", command = "python3 send_tips.py" }
